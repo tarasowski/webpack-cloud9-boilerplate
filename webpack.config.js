@@ -1,7 +1,10 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const path = require('path')
 
+const MODE = process.env.WEBPACK_MODE || 'development'
+
 module.exports = {
+    mode: MODE,
     watch: true,
     entry: './src/app.js',
     output: {

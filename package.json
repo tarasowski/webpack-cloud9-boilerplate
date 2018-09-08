@@ -9,11 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync-webpack-plugin": "^2.2.2",
     "browser-sync": "^2.24.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   }
 }
