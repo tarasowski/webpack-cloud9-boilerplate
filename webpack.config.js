@@ -1,10 +1,8 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
 
-const MODE = process.env.WEBPACK_MODE || 'development'
-
 module.exports = {
-    mode: MODE,
     watch: true,
     entry: './src/app.js',
     output: {
@@ -17,6 +15,7 @@ module.exports = {
       port: 8080,
       files: ['./*.html'], // watch for files to reload
       server: { baseDir: ['./'] } // directory being served
-    })
+    }),
+    new CleanWebpackPlugin(['dist']),
   ]
 }
